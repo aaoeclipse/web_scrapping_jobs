@@ -10,12 +10,16 @@ class Card:
         self.description = description
 
     def getMinMax(self, ammount):
-        if ammount == 'unkown':
+        if ammount is 'unknown':
             self.minimum = 0
             self.maximum = 0
             return
-        
+
         separated_ammount = ammount.split('-')
+        if len(separated_ammount) == 1:
+            self.minimum = re.sub("\D", "", separated_ammount[0])
+            self.maximum = re.sub("\D", "", separated_ammount[0])
+            return 
 
         self.minimum=re.sub("\D", "", separated_ammount[0])
         self.maximum=re.sub("\D", "", separated_ammount[1])
