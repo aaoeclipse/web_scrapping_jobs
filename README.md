@@ -6,3 +6,6 @@ python3 -m pip install -r requirements.txt
 
 ## Run
 python3 scrapping.py
+
+## Result
+The final result is saved in the jobs.txt
